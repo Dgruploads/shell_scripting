@@ -27,7 +27,7 @@ while IFS= read -r website; do
  then
   echo "Reminder"
   echo "${_sub}"
-  mail -s "$_sub" -r "$_from" "$_to" <<< "REMAINDER: The TLS/SSL certificate ($website) will expire soon in $date_diff days"
+  mail -s "$_sub" -r "$_from" "$_to" <<< "REMINDER: The TLS/SSL certificate ($website) will expire soon in $date_diff days"
  elif [ $date_diff -le 15 -a $date_diff -ge 7 ]
  then
   echo "Warning"
